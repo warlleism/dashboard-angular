@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="graphic-container">
+  <div class="graphic-container" *ngIf="typeCases === true">
     <div
       class="graphic-line-info-container"
       *ngFor="let case of cases; let last = last"
@@ -37,6 +37,22 @@
         [class.noAfter]="last"
       >
         <div>{{ case.qtd }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="graphic-container" *ngIf="typeCases === false">
+    <div
+      class="graphic-line-info-container"
+      *ngFor="let info of infos; let last = last"
+    >
+      <div>{{ info.country }}</div>
+      <div
+        class="line-container"
+        [style.width.%]="info.percentage"
+        [class.noAfter]="last"
+      >
+        <div>{{ info.qtd }}</div>
       </div>
     </div>
   </div>
