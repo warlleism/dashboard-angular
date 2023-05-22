@@ -14,6 +14,8 @@ interface ICases {
 
 export class CasesByCountryComponent {
 
+  typeCases: boolean = false
+
   cases: ICases[] = [
     { country: 'Spa', percentage: 40, qtd: "286,308" },
     { country: 'Brz', percentage: 70, qtd: "498,440" },
@@ -26,12 +28,16 @@ export class CasesByCountryComponent {
     { country: 'Fra', percentage: 25, qtd: "188,625" },
   ]
 
-  transform() {
+  sortArray() {
     this.cases = this.cases.sort((a, b) => b.percentage - a.percentage);
   }
 
+  handlerTotalCases(value: boolean) {
+    this.typeCases = value
+  }
+
   ngOnInit(): void {
-    this.transform()
+    this.sortArray()
   }
 
 }

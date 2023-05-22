@@ -14,7 +14,7 @@
     .cases-info-container {
       div:nth-child(1) {
         font-size: 2rem;
-        color: #272727;
+        color: #830176;
         font-weight: 700;
         letter-spacing: -1px;
       }
@@ -44,12 +44,19 @@
       justify-content: center;
       font-family: "Roboto Condensed", sans-serif;
     }
+    .handlerBackgroundLigth {
+      background-color: #fff;
+      color: #420183 !important;
+    }
+    .handlerBackgroundDark {
+      color: #fff;
+      background-color: #420183;
+    }
 
     div:nth-child(1) {
       color: #fff;
       font-weight: 500;
       margin-right: 10px;
-      background-color: #420183;
     }
   }
 
@@ -80,6 +87,10 @@
         position: absolute;
         pointer-events: none;
         background-color: rgba(31, 31, 31, 0.156);
+      }
+
+      .noAfter ::after {
+        display: none;
       }
 
       .line-container {

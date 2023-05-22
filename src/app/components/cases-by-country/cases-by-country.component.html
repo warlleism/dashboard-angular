@@ -1,23 +1,43 @@
 <div class="casesContry-container">
-
   <div class="info-top-container">
     <div class="cases-info-container">
       <div>Casos de vírus por país</div>
       <div>Casos confirmados</div>
     </div>
     <div class="select-info-container">
-      <div>Total de casos</div>
-      <div>Casos ativos</div>
-    </div>
-  </div>
+      <div
+        (click)="handlerTotalCases(true)"
+        [ngClass]="
+          typeCases ? 'handlerBackgroundDark' : 'handlerBackgroundLigth'
+        "
+      >
+        Total de casos
+      </div>
 
-  <div class="graphic-container">
-    <div class="graphic-line-info-container" *ngFor="let case of cases">
-      <div>{{ case.country }}</div>
-      <div class="line-container" [style.width.%]="case.percentage">
-        <div>{{ case.qtd }}</div>
+      <div
+        (click)="handlerTotalCases(false)"
+        [ngClass]="
+          typeCases ? 'handlerBackgroundLigth' : 'handlerBackgroundDark'
+        "
+      >
+        Casos ativos
       </div>
     </div>
   </div>
 
+  <div class="graphic-container">
+    <div
+      class="graphic-line-info-container"
+      *ngFor="let case of cases; let last = last"
+    >
+      <div>{{ case.country }}</div>
+      <div
+        class="line-container"
+        [style.width.%]="case.percentage"
+        [class.noAfter]="last"
+      >
+        <div>{{ case.qtd }}</div>
+      </div>
+    </div>
+  </div>
 </div>
