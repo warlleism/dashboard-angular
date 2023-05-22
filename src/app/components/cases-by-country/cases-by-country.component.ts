@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Pipe, PipeTransform } from '@angular/core';
 
 interface ICases {
   country: string;
@@ -16,15 +15,15 @@ interface ICases {
 export class CasesByCountryComponent {
 
   cases: ICases[] = [
-    { country: 'Usa', percentage: 80, qtd: "1,816,820" },
-    { country: 'Brz', percentage: 20, qtd: "498,440" },
-    { country: 'Rus', percentage: 50, qtd: "396,575" },
-    { country: 'Spa', percentage: 10, qtd: "286,308" },
-    { country: 'UK', percentage: 5, qtd: "272,826" },
-    { country: 'Ita', percentage: 50, qtd: "232,664" },
-    { country: 'Fra', percentage: 90, qtd: "188,625" },
-    { country: 'Ger', percentage: 10, qtd: "183,294" },
+    { country: 'Spa', percentage: 40, qtd: "286,308" },
+    { country: 'Brz', percentage: 70, qtd: "498,440" },
     { country: 'Ind', percentage: 20, qtd: "181,827" },
+    { country: 'Rus', percentage: 60, qtd: "396,575" },
+    { country: 'Usa', percentage: 80, qtd: "1,816,820" },
+    { country: 'UK', percentage: 35, qtd: "272,826" },
+    { country: 'Ita', percentage: 30, qtd: "232,664" },
+    { country: 'Ger', percentage: 20, qtd: "183,294" },
+    { country: 'Fra', percentage: 25, qtd: "188,625" },
   ]
 
   transform() {
@@ -34,7 +33,5 @@ export class CasesByCountryComponent {
   ngOnInit(): void {
     this.transform()
   }
-
-
 
 }
