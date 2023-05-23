@@ -1,6 +1,7 @@
 .casesContry-container {
   width: 100%;
   height: 100vh;
+  margin-bottom: 60px;
   box-sizing: border-box;
   padding: 100px 80px 0px 80px;
   font-family: "Castoro Titling", cursive;
@@ -100,7 +101,7 @@
         border-radius: 3px;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(to right, #4201832a, #5b01b67c);
+        background: #5b01b6db;
 
         div {
           width: 100%;
@@ -120,7 +121,7 @@
       }
 
       .line-container:hover {
-        background: linear-gradient(to right, #42018395, #5b01b6);
+        background: #5b01b6;
       }
     }
   }

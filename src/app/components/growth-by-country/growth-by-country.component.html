@@ -1,1 +1,59 @@
-<p>growth-by-country works!</p>
+<div class="growthCountry-container">
+  <div class="info-top-container">
+    <div class="cases-info-container">
+      <div>Crescimento recente do vírus por país</div>
+      <div>Aumento de casos nas últimas 24 horas - 8 principais países</div>
+    </div>
+    <div class="select-info-container">
+      <div
+        (click)="handlerTotalCases(true)"
+        [ngClass]="
+          typeCases ? 'handlerBackgroundDark' : 'handlerBackgroundLigth'
+        "
+      >
+        Por Número
+      </div>
+
+      <div
+        (click)="handlerTotalCases(false)"
+        [ngClass]="
+          typeCases ? 'handlerBackgroundLigth' : 'handlerBackgroundDark'
+        "
+      >
+        Por Porcentagem
+      </div>
+    </div>
+  </div>
+
+  <div class="graphic-container" *ngIf="typeCases === true">
+    <div
+      class="graphic-line-info-container"
+      *ngFor="let case of cases; let last = last"
+    >
+      <div
+        class="line-container"
+        [style.height.vh]="case.percentage"
+        [class.noAfter]="last"
+      >
+        <div class="text">+{{ case.qtd }}</div>
+      </div>
+      <div class="country">{{ case.country }}</div>
+    </div>
+  </div>
+
+  <div class="graphic-container" *ngIf="typeCases === false">
+    <div
+      class="graphic-line-info-container"
+      *ngFor="let info of infos; let last = last"
+    >
+      <div
+        class="line-container"
+        [style.height.vh]="info.percentage"
+        [class.noAfter]="last"
+      >
+        <div class="text">+{{ info.qtd }}</div>
+      </div>
+      <div class="country">{{ info.country }}</div>
+    </div>
+  </div>
+</div>
