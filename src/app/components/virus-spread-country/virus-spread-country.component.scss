@@ -1,0 +1,112 @@
+.virusSpreadCountry-container {
+  width: 100%;
+  background: #2c2c2c;
+  box-sizing: border-box;
+  padding: 100px 80px 0px 80px;
+  font-family: "Castoro Titling", cursive;
+
+  .info-top-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    justify-content: space-between;
+
+    .cases-info-container {
+      div:nth-child(1) {
+        font-size: 2rem;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      div:nth-child(2) {
+        font-size: 1rem;
+        font-weight: 900;
+        color: #dbdbdbbc;
+      }
+    }
+  }
+  .select-info-container {
+    height: 30px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #31002c;
+
+    div {
+      height: 100%;
+      display: flex;
+      padding: 0 7px;
+      cursor: pointer;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    div:nth-child(1) {
+      color: #fff;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+  }
+
+  .graphic-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .graphic-line-info-container {
+      width: 250px;
+      height: 320px;
+      display: flex;
+      margin: 10px 70px 70px 0;
+
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .text-country {
+        color: #ffffff9a;
+        font-size: 1.1rem;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      .text-percentage {
+        color: #ffffff;
+        font-size: 1.5rem;
+      }
+
+      .line-container {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        border-radius: 100%;
+        align-items: center;
+        background: #a0a0a0db;
+        justify-content: center;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.252);
+
+        .blob-container {
+          padding: 40px;
+          border-radius: 100%;
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.252);
+          background-image: linear-gradient(
+            90deg,
+            hsl(294deg 100% 20%) 14%,
+            hsl(294deg 50% 31%) 55%,
+            hsl(295deg 34% 39%) 71%,
+            hsl(296deg 24% 48%) 81%,
+            hsl(297deg 22% 56%) 88%,
+            hsl(298deg 22% 65%) 94%,
+            hsl(299deg 22% 73%) 98%,
+            hsl(299deg 23% 82%) 100%,
+            hsl(300deg 23% 91%) 101%,
+            hsl(0deg 0% 100%) 101%
+          );
+        }
+      }
+    }
+  }
+}

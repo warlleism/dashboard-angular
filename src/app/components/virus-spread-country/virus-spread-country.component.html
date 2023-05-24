@@ -1,0 +1,25 @@
+<div class="virusSpreadCountry-container">
+  <div class="info-top-container">
+    <div class="cases-info-container">
+      <div>Vírus espalhado por país</div>
+      <div>Casos confirmados em relação ao tamanho da população</div>
+    </div>
+  </div>
+
+  <div class="graphic-container" *ngIf="typeCases === true">
+    <div
+      class="graphic-line-info-container"
+      *ngFor="let case of cases; let last = last"
+    >
+      <div class="line-container">
+        <div
+          class="blob-container"
+          [style.width.px]="case.percentage"
+          [style.height.px]="case.percentage"
+        ></div>
+      </div>
+      <div class="text-country" >{{ case.country }}</div>
+      <div class="text-percentage" >0.{{ case.percentage }}%</div>
+    </div>
+  </div>
+</div>
