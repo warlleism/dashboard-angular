@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 interface ICases {
   country: string;
   percentage: number;
   qtd: string
 }
-
 @Component({
-  selector: 'app-virus-spread-country',
-  templateUrl: './virus-spread-country.component.html',
-  styleUrls: ['./virus-spread-country.component.scss']
+  selector: 'app-fatalities',
+  templateUrl: './fatalities.component.html',
+  styleUrls: ['./fatalities.component.scss']
 })
-export class VirusSpreadCountryComponent {
+export class FatalitiesComponent {
+
 
   cases: ICases[] = [
     { country: 'USA', percentage: 56, qtd: "286,308" },
     { country: 'Brasil', percentage: 24, qtd: "498,440" },
     { country: 'Russia', percentage: 24, qtd: "181,827" },
     { country: 'Spain', percentage: 27, qtd: "396,575" },
-    { country: 'UK', percentage:61, qtd: "1,816,820" },
+    { country: 'UK', percentage: 61, qtd: "1,816,820" },
     { country: 'Italy', percentage: 41, qtd: "272,826" },
     { country: 'France', percentage: 39, qtd: "232,664" },
     { country: 'Germany', percentage: 29, qtd: "183,294" },
@@ -39,5 +40,6 @@ export class VirusSpreadCountryComponent {
   ngOnInit(): void {
     this.sortArray()
   }
+
 
 }

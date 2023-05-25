@@ -1,0 +1,83 @@
+.fatalities-container {
+  width: 100%;
+  background: #363636;
+  box-sizing: border-box;
+  padding: 100px 80px 0px 80px;
+  font-family: "Castoro Titling", cursive;
+
+  .info-top-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    justify-content: space-between;
+
+    .cases-info-container {
+      div:nth-child(1) {
+        font-size: 2rem;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      div:nth-child(2) {
+        font-size: 1rem;
+        font-weight: 900;
+        color: #dbdbdbbc;
+      }
+    }
+  }
+  .select-info-container {
+    height: 30px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #31002c;
+
+    div {
+      height: 100%;
+      display: flex;
+      padding: 0 7px;
+      cursor: pointer;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    div:nth-child(1) {
+      color: #fff;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+  }
+
+  .graphic-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .graphic-line-info-container {
+      width: 250px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
+      margin: 10px 70px 70px 0;
+      .text {
+        color: #fff;
+        font-size: 1.6rem;
+      }
+      .country {
+        top: 33%;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.1rem;
+        position: absolute;
+        letter-spacing: -1px;
+      }
+    }
+  }
+}

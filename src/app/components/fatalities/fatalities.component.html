@@ -1,4 +1,4 @@
-<div class="virusSpreadCountry-container">
+<div class="fatalities-container">
   <div class="info-top-container">
     <div class="cases-info-container">
       <div>Vírus espalhado por país</div>
@@ -11,15 +11,9 @@
       class="graphic-line-info-container"
       *ngFor="let case of cases; let last = last"
     >
-      <div class="line-container">
-        <div
-          class="blob-container"
-          [style.width.px]="case.percentage"
-          [style.height.px]="case.percentage"
-        ></div>
-      </div>
-      <div class="text-country" >{{ case.country }}</div>
-      <div class="text-percentage" >0.{{ case.percentage }}%</div>
+      <circle-progress [percent]="case.percentage"></circle-progress>
+      <div class="text">{{ case.percentage }}%</div>
+      <div class="country">{{ case.country }}</div>
     </div>
   </div>
 </div>
