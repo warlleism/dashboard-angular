@@ -1,3 +1,5 @@
+[Dashboard.webm](https://github.com/warlleism/dashboard-angular.js/assets/56014478/1a2eb23b-c852-4624-a48f-ca5026f9a910)
+
 # Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
